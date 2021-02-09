@@ -9,7 +9,8 @@
         (+ number 1)
         number))
 
-(define (runtime) (current-inexact-milliseconds))
+;If using Racket to run Scheme, remove the comment mark from the line below 
+;(define (runtime) (current-inexact-milliseconds))
 
 ;primality procedure
 (define (primes? number)

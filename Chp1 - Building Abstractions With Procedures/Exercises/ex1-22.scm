@@ -9,7 +9,8 @@
         (+ number 1)
         number))
 
-(define (runtime) (current-inexact-milliseconds))
+;If using Racket to run Scheme, remove the comment mark from the line below.
+;(define (runtime) (current-inexact-milliseconds))
 
 (define (adjustment-divisor number)
     (if (= number 2) 
@@ -42,6 +43,7 @@
     (display elapsed-time)
     (display " milliseconds"))
 
+;Search an especifc quantity of prime numbers after number 
 (define (search-for-primes number quantity)
     (define (search-iter number count)
         (cond ((and (<= count quantity) (timed-prime-test number)) 
